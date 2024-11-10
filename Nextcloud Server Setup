@@ -1,19 +1,32 @@
 # Nextcloud Server Setup
 
-### Project Overview
-- **Objective**: Set up a personal cloud server accessible remotely with enhanced security measures.
-- **Skills Demonstrated**: Networking, server configuration, SSL certificate management, firewall setup.
+## Project Overview
+- **Objective**: Set up a personal cloud server to enable secure local file storage and data management, with future plans for remote accessibility.
+- **Skills Demonstrated**: Networking, server configuration, initial security measures (firewall setup), and Nextcloud installation.
 
-### Key Steps
-1. **Installation and Configuration**: Details on installing Nextcloud and configuring it to work on a local network.
-2. **Remote Access Setup**: Port forwarding, setting up DDNS, and obtaining an SSL certificate with Let's Encrypt.
-3. **Security Measures**: Firewall configuration, limiting IP access, and setting up SSH tunneling.
+## Key Steps
 
-### Technical Challenges & Solutions
-- Describe any issues you encountered, like router settings or SSL certificate errors, and how you resolved them.
+### 1. Server Installation and Nextcloud Setup
+   - **Operating System**: Installed Linux on a Dell Optiplex 7050 to serve as the primary host for the Nextcloud instance.
+   - **Nextcloud Installation**: Configured Nextcloud for local network access, including setting up a MySQL database with user permissions.
+   - **Database User**: Created a dedicated database user (`D-319`) for secure and organized management of Nextcloud’s backend.
 
-### Future Improvements
-- Mention any planned improvements (e.g., automated backups, enhanced monitoring).
+### 2. Local Network Configuration
+   - **Static IP Assignment**: Assigned a static IP to the server for consistent local access.
+   - **Local Access Only**: Configured Nextcloud to be accessible over the local network initially, with plans for remote access in the future.
 
-### Screenshots/Diagrams
-- Add screenshots of configuration screens, network diagrams, or firewall rules to illustrate your setup.
+### 3. Security Measures
+   - **Firewall Configuration**: Set up a basic firewall using `ufw` to restrict network access and only allow necessary services.
+     - Allowed HTTPS traffic on port 443 (future remote access).
+     - Enabled SSH access for secure remote management.
+     - Configured local network restrictions to ensure security within the network.
+   - **Planned Enhancements**: Remote access setup with port forwarding, SSL certificates from Let’s Encrypt, and dynamic DNS for accessibility anywhere.
+
+### 4. Future Improvements
+   - **Remote Access**: Plans to implement secure remote access using DDNS and SSL.
+   - **Data Backup Automation**: Considering a backup script using `rsync` to automate data backup to a designated drive.
+   - **Enhanced Security**: Implementation of additional measures like SSH tunneling and potential VPN configuration for secure remote connections.
+
+## Technical Challenges & Solutions
+- **Router Configuration**: Adjusted router settings to assign a static IP and tested local network access.
+- **Database Permissions**: Troubleshot initial permissions issues with MySQL user `D-319` to ensure secure database access for Nextcloud.
