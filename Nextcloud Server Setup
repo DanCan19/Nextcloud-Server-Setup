@@ -1,0 +1,19 @@
+# Nextcloud Server Setup
+
+### Project Overview
+- **Objective**: Set up a personal cloud server accessible remotely with enhanced security measures.
+- **Skills Demonstrated**: Networking, server configuration, SSL certificate management, firewall setup.
+
+### Key Steps
+1. **Installation and Configuration**: Details on installing Nextcloud and configuring it to work on a local network.
+2. **Remote Access Setup**: Port forwarding, setting up DDNS, and obtaining an SSL certificate with Let's Encrypt.
+3. **Security Measures**: Firewall configuration, limiting IP access, and setting up SSH tunneling.
+
+### Technical Challenges & Solutions
+- Describe any issues you encountered, like router settings or SSL certificate errors, and how you resolved them.
+
+### Future Improvements
+- Mention any planned improvements (e.g., automated backups, enhanced monitoring).
+
+### Screenshots/Diagrams
+- Add screenshots of configuration screens, network diagrams, or firewall rules to illustrate your setup.
